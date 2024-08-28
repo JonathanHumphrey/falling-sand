@@ -18,6 +18,9 @@ import HelloWorld from './components/HelloWorld.vue'
 header {
   line-height: 1.5;
   max-height: 100vh;
+  border: solid white;
+  min-width: 10rem;
+  max-width: 20rem;
 }
 
 .logo {
@@ -26,7 +29,7 @@ header {
 }
 
 nav {
-  width: 100%;
+  width: 20%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;

@@ -7,3 +7,10 @@ import SandCanvas from '../components/SandCanvas.vue'
     <SandCanvas/>
   </main>
 </template>
+
+<style>
+main{
+  width: 100%;
+}
+</style>
+
