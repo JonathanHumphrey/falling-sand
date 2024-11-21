@@ -9,7 +9,7 @@
                 id="brushSize"
                 type="range"
                 min="1"
-                max="6"
+                max="10"
                 v-model="brushSize"
             />
         </div>
@@ -58,7 +58,7 @@
       
       const canvasWidth = 800;
       const canvasHeight = 600;
-      const cellSize = 2;
+      const cellSize = 4;
       const cols = canvasWidth / cellSize;
       const rows = canvasHeight / cellSize;
       const grid = Array.from({ length: cols }, () => Array(rows).fill(0));
@@ -150,7 +150,7 @@
         }
       };
   
-      const updateCanvas = () => {
+const updateCanvas = () => {
   if (!context.value) return;
 
   context.value.clearRect(0, 0, canvasWidth, canvasHeight);
@@ -320,6 +320,8 @@
   .canvas-container{
     border-radius: 1rem;
     padding: 2rem;
+    display: flex;
+    justify-content: center;
     background: rgb(103, 97, 97);
   }
   button{
@@ -336,33 +338,46 @@
   }
   .active-button{
     color: black;
-    background: rgb(144, 206, 251);
-    flex-grow: 2;
-    transition: all .75s;
+    background: rgb(216, 235, 248);
   }
   .active-button.sand{
-    background-color: #FFD700;
+    border: solid 5px;
+    border-color: #FFD700;
+    color: black;
 
   }
   .active-button.water{
-    background-color: #00BFFF;
+    border: solid 5px;
+    border-color: #00BFFF;
+    color: black;
   }
   .active-button.rock{
-    background-color: #808080;
-    color: white
+    border: solid 5px;
+    border-color: #808080;
+    color: black
   }
   .active-button.del{
-    background-color: rgb(234, 36, 33);
-    color: white;
+    border: solid 5px;
+    border-color: rgb(234, 36, 33);
+    color: black;
   }
   .input-containers{
     display: flex;
+    justify-content: space-around;
+    margin-top: -1rem;
+    background: rgb(65, 59, 59);
+    border-radius: 1rem;
+    z-index: 2;
   }
   .btn-group{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     width: 20rem;
+    background: rgb(103, 97, 97);
+    border-radius: 1rem;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: .5rem
   }
   .slider-group{
     display: flex;
@@ -370,6 +385,10 @@
     width: 20rem;
     justify-content: space-between;
     align-items: center;
+    background: rgb(103, 97, 97);
+    border-radius: 1rem;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: .5rem;
   }
   </style>
   

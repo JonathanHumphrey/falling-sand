@@ -16,7 +16,8 @@
 
 <style scoped>
 main{
-  
+  display: flex;
+  justify-content: center;
   height: 100vh;
 }
 .container{
